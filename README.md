@@ -23,7 +23,7 @@ vehicle_detector/             # ROS Package Root
 ├── package.xml               # Package metadata and dependencies
 ├── scripts/                  # Python executable scripts
 │   ├── detect.py             # Main detection node
-│   └── extract_images.py     # Image extraction tool (Q3.1)
+│   └── extract_images.py     # Image extraction tool
 ├── launch/                   # Launch files
 │   └── detect.launch         # One-click start configuration
 └── README.md                 # Project documentation
