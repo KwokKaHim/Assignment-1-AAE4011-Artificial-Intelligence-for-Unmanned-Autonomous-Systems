@@ -11,7 +11,7 @@ It is a powerful object detection tool
 
 Good for laptop: low requirement of hardware
 ## How to run
-1. Make sure download the ROS and Python 3
+1. download the ROS 1 (Noetic) with ubuntu 20.04 and Python 3
 2. Create a catkin workspace
 3. Go into src and create the package
 4. Add a scripts folder for Python nodes
