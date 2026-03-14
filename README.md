@@ -74,7 +74,7 @@ vehicle_detector/             # ROS Package Root
 
 
 ##  Video Demonstration
-[![Vehicle Detection Demo](https://img.shields.io)](https://youtu.be/Xb_POjtcT4s)
+https://youtu.be/Xb_POjtcT4s
 
 
 ---
