@@ -7,7 +7,7 @@ Deep Learning Inference: YOLOv8n (Nano)
 
 Synchronization & Visualization: The final annotated frame is re-compressed and published to the /vehicle_detection/image/compressed topic in Foxglove
 ### The reason why using YOLOv8n (Nano)
-Is is a powerful object detection tool
+It is a powerful object detection tool
 
 Good for laptop: low requirement of hardware
 ## How to run
