@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+import rosbag
+import cv2
+import os
+from cv_bridge import CvBridge
+from sensor_msgs.msg import CompressedImage
+
+def extract():
+    bag_path = "/mnt/c/Users/LENOVO/Downloads/ass.bag"
+    output_dir = "extracted_frames"
+    topic_name = "/hikcamera/image_2/compressed"
+    
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    bridge = CvBridge()
+    count = 0
+    
+    print(f"正在讀取 {bag_path}...")
+    with rosbag.Bag(bag_path, "r") as bag:
+        for topic, msg, t in bag.read_messages(topics=[topic_name]):
+            cv_img = bridge.compressed_imgmsg_to_cv2(msg, "bgr8")
+            if count == 0:
+                h, w, _ = cv_img.shape
+                print(f"影像屬性: 解析度 {w}x{h}, 格式 {msg.format}")
+
+            img_name = os.path.join(output_dir, f"frame_{count:04d}.jpg")
+            cv2.imwrite(img_name, cv_img)
+            count += 1
+
+    print(f"提取完成！共儲存 {count} 張影像至 {output_dir} 資料夾。")
+
+if __name__ == "__main__":
+    extract()
