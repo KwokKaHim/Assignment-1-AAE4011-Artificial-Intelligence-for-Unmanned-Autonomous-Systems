@@ -10,7 +10,7 @@ Synchronization & Visualization: The final annotated frame is re-compressed and 
 Is is a powerful object detection tool
 
 Good for laptop: low requirement of hardware
-### How to run
+## How to run
 1. Make sure download the ROS and Python 3
 2. Create a catkin workspace
 3. Go into src and create the package
@@ -19,7 +19,7 @@ Good for laptop: low requirement of hardware
 6. Write a Python code of detect.py
 7. Open 4 terminal
 8. In the first terminal, Start ROS Master by using 'roscore'
-9. In the second terminal, Start Foxglove Bridge by using 'roslaunch foxglove_bridge foxglove_bridge.launch send_buffer_limit:=100000000'
+9. In the second terminal, Start Foxglove Bridge by using 'roslaunch foxglove_bridge foxglove_bridge.launch send_buffer_limit:=100000000' (choose '/vehicle_detection/image/compressed' in image panel in Foxglove)
 10. In the third terminal, Start the Detection Node by using 'python3 detect.py'
 11. In the forth terminal, Play the Rosbag by using 'rosbag play "/path/to/your/.bag"' (The path format is Linux) 
 
