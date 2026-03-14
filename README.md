@@ -22,5 +22,6 @@ Good for laptop: low requirement of hardware
 9. In the second terminal, Start Foxglove Bridge by using 'roslaunch foxglove_bridge foxglove_bridge.launch send_buffer_limit:=100000000' (choose '/vehicle_detection/image/compressed' in image panel in Foxglove)
 10. In the third terminal, Start the Detection Node by using 'python3 detect.py'
 11. In the forth terminal, Play the Rosbag by using 'rosbag play "/path/to/your/.bag"' (The path format is Linux) 
-
+## Video Demonstration
+https://youtu.be/Xb_POjtcT4s
 
