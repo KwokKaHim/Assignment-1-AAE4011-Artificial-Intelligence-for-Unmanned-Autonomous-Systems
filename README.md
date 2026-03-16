@@ -52,16 +52,16 @@ vehicle_detector/             # ROS Package Root
    sudo apt install ros-noetic-foxglove-bridge ros-noetic-image-transport-plugins
 
     ```
-3.  **Package Setup**: Create your package and add a `scripts` folder:
+4.  **Package Setup**: Create your package and add a `scripts` folder:
     ```bash
     catkin_create_pkg vehicle_detector rospy sensor_msgs std_msgs cv_bridge
     mkdir scripts && cd scripts
     ```
-4.  **Scripts**: Save your `extract_images.py` and `detect.py` into the `scripts` folder and make them executable:
+5.  **Scripts**: Save your `extract_images.py` and `detect.py` into the `scripts` folder and make them executable:
     ```bash
     chmod +x *.py
     ```
-5.  **Execution**: Open **4 terminals** and run the following in order:
+6.  **Execution**: Open **4 terminals** and run the following in order:
 
     *   **Terminal 1**: Start ROS Master
         ```bash
