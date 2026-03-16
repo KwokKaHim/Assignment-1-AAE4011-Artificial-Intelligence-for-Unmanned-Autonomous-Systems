@@ -1,21 +1,23 @@
-#  ROS-Based Vehicle Detection Pipeline
+# AAE4011 Assignment 1 — Q3: ROS-Based Vehicle Detection from Rosbag
+> **Student Name:** [Kwok Ka Him] | **Student ID:** [25017452D] | **Date:** [16-3-2026]
+## 1. Overview
 This project demonstrates a real-time vehicle detection system built on **ROS Noetic** and **Ubuntu 20.04**. It processes compressed image streams from a rosbag and visualizes the results through **Foxglove Studio**.
 
 ---
 
-##  Method Description
+##  2. Detection Method
 
-### 1. System Architecture
+###  System Architecture
 *   **Data Ingestion**: The node subscribes to the `/hikcamera/image_2/compressed` topic. Using compressed streams optimizes bandwidth and prevents buffer overflows.
 *   **Deep Learning Inference**: Powered by **YOLOv8n (Nano)** for high-speed object detection.
 *   **UI & Visualization**: **Foxglove Studio** is used as the primary interface for real-time playback, detection display, and performance statistics.
 *   **Synchronization**: Annotated frames are re-compressed and published to the `/vehicle_detection/image/compressed` topic to ensure low-latency visual feedback.
 
-### 2. Why YOLOv8n (Nano)?
+###  Why YOLOv8n (Nano)?
 *   **Efficiency**: It is a powerful and lightweight object detection tool designed for edge devices.
 *   **Hardware Compatibility**: Ideal for standard laptops; it maintains a high FPS (Frames Per Second) even with limited GPU/CPU resources, ensuring the detection keeps up with the bag file stream.
 
-## Repository Structure
+## 3. Repository Structure
 This package follows the standard ROS directory structure for evaluation:
 ```text
 vehicle_detector/             # ROS Package Root
@@ -30,10 +32,14 @@ vehicle_detector/             # ROS Package Root
 ```
 
 ---
+## 4. Prerequisites
+* OS: Ubuntu 20.04 (LTS)
+* ROS Version: ROS Noetic
+* Python: 3.8+
+---
+##  5. How to Run
 
-##  How to Run
-
-1.  **Environment**: Ensure you have **ROS 1 (Noetic)** installed on **Ubuntu 20.04** with **Python 3**.
+1.  **Environment**: **ROS 1 (Noetic)** installed on **Ubuntu 20.04** with **Python 3**.
 2.  **Workspace**: Create and initialize a catkin workspace:
     ```bash
     mkdir -p ~/catkin_ws/src && cd ~/catkin_ws/src
@@ -68,8 +74,13 @@ vehicle_detector/             # ROS Package Root
         ```
 
 ---
-
-
+## Sample Results
+### Image extraction summary
+- total frame: 1116
+- resolution: 1440x1080
+- topic name: /vehicle_detection/image/compressed
+###  Detection results (sample screenshot, detection statistics)
+  
 
 
 
