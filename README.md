@@ -45,6 +45,13 @@ vehicle_detector/             # ROS Package Root
     mkdir -p ~/catkin_ws/src && cd ~/catkin_ws/src
     catkin_init_workspace
     ```
+3. **Install dependencies**
+   ```bash
+   pip3 install ultralytics opencv-python cv_bridge
+   sudo apt update
+   sudo apt install ros-noetic-foxglove-bridge ros-noetic-image-transport-plugins
+
+    ```
 3.  **Package Setup**: Create your package and add a `scripts` folder:
     ```bash
     catkin_create_pkg vehicle_detector rospy sensor_msgs std_msgs cv_bridge
@@ -74,23 +81,23 @@ vehicle_detector/             # ROS Package Root
         ```
 
 ---
-## Sample Results
+## 6. Sample Results
 ### Image extraction summary
 - total frame: 1116
 - resolution: 1440x1080
 - topic name: /vehicle_detection/image/compressed
-###  Detection results (sample screenshot, detection statistics)
-  
+###  Detection results 
+- sample scrennshot <img width="1919" height="1199" alt="Image" src="https://github.com/user-attachments/assets/c8eb7a3e-4ffe-46cf-bcbf-8d0fd083ea03" />
 
 
 
-##  Video Demonstration
+##  7. Video Demonstration
 https://youtu.be/Xb_POjtcT4s
 
 
 ---
 
-##  Reflection & Critical Analysis
+##  8. Reflection & Critical Analysis
 ### What did you learn?
 After finishing this assignment, I learned how to make commands in the ROS environment. For example, I know how to write the python code in the ROS environment. I need to create a ROS Package. Next, I need to add a scripts folder. Then, create a Python file in scripts with a decided name. Finally, use the ‘nano scripts/detect.py’ command and enter a coding environment. Moreover, I know what is the different between catkin make or colcon build. Catkin make is for ROS 1. colon build is for ROS 2. Also, I learned how to connect the ROS environment to Foxglove. 
 ### How did you use AI tools?
